@@ -1,11 +1,12 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Text Filter",
     "version": "1.0.0",
-    "description": "Filter out the garbage found within the stuff you read online!"
+    "description": "Filter out the garbage found within the stuff you read online!",
 
-    "web_accessible_resources":[""]
+    "web_accessible_resources":[""],
 
     "content_scripts": [{
 
     }]
+}   
