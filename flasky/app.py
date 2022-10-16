@@ -25,7 +25,7 @@ def generate_regex(banned_list):
         for i in range(0, len(bannedWord)):
             regex = list(bannedWord)
             regex[i] = '[^a-z]'
-            regexes.append("".join(regex))
+            regexes.append("".join(regex)+"$")
             # temp.join('(?:% s)' % '|'.join(regex))
             # print(temp)
     temp = '(?:% s)' % '|'.join(regexes)
