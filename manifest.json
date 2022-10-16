@@ -9,6 +9,9 @@
         "default_popup": "filter.html"
     },
 
-    "permissions": ["activeTab"]
+    "permissions": [
+        "activeTab",
+        "system.network"
+    ]
 
     }
