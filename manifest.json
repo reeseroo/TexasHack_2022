@@ -9,9 +9,12 @@
         "default_popup": "filter.html"
     },
 
+    "background": {
+        "service_worker": "background.js"
+    },
+
     "permissions": [
-        "activeTab",
-        "system.network"
+        "activeTab"
     ]
 
     }
