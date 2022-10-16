@@ -65,11 +65,15 @@ def check_input_censored(text, regex):
     banned_count = 0
 
     for textIndex in text_word_list:
-        if re.match(regex, textIndex):
+        is_match = re.match(regex, textIndex)
+        if is_match:
+            # partially censor words
+            # censored += textIndex[:is_match.span()[0]]
             banned_count += 1
             censored += ("*" * len(textIndex))
-            # if we want we can print the offending text
-            # print(textIndex)
+
+            # censored += ("*" * (is_match.span()[1] - is_match.span()[0]))
+            # censored += textIndex[is_match.span()[1]:]
         else:
             censored += textIndex
         censored += " "
