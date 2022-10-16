@@ -1,5 +1,11 @@
 const api_url = "http://127.0.0.1:5000";
 
+
+
+function getInput() {
+  document.getElementById("userInput").innerHTML = 'data'
+};
+
 async function getPercentage(url) {
 
     const response = await fetch(url);
@@ -7,13 +13,9 @@ async function getPercentage(url) {
     var data = await response.json();
     console.log(data);
     if (response) {
-        getInput();
+        console.log(response);
     }
-    show(data);
 }
 
+document.getElementById("myButton".addEventListener("click", getInput));
 getPercentage(api_url);
-
-function getInput() {
-    document.getElementById('userInput').innerHTML = data;
-}
